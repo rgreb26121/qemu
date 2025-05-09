@@ -56,9 +56,9 @@ COPY --chmod=744 ./web/conf/nginx.conf /etc/nginx/sites-enabled/web.conf
 VOLUME /storage
 EXPOSE 22 5900 8006
 
-ENV BOOT="alpine"
-ENV CPU_CORES="2"
-ENV RAM_SIZE="2G"
-ENV DISK_SIZE="16G"
+ENV BOOT="fedora"
+ENV CPU_CORES="16"
+ENV RAM_SIZE="4G"
+ENV DISK_SIZE="8G"
 
 ENTRYPOINT ["/usr/bin/tini", "-s", "/run/entry.sh"]
